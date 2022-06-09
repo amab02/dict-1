@@ -1,0 +1,1 @@
+this program will translet words from Swedish to English
