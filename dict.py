@@ -50,7 +50,7 @@ while True: ## REPL - Read Execute Program Loop
     elif cmd == "add":
         name = input("  Word: ").strip().title()
         phone = input("  Translation: ")
-        add_word(conn, name, phone).strip()
+        add_word(conn, name, phone)
     elif cmd == "delete":
         ID = input("  ID: ")
         delete_word(conn, ID)
