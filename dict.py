@@ -47,15 +47,30 @@ def main():
      while True: ## REPL - Read Execute Program Loop
         cmd = input("Command: ").strip().lower()
     if cmd == "list":
+<<<<<<< HEAD
     print(read_dict(conn))
     elif cmd == "add":
      name = input("  Word: ").strip().title()
      phone = input("  Translation: ")
      add_word(conn, name, phone)
      print(f" Added word { name}")
+=======
+        for i, wd, trans in read_dict(conn):
+            print(f"{i}: {wd} - {trans}")
+    elif cmd == "add":
+        name = input("  Word: ").strip().title()
+        phone = input("  Translation: ")
+        add_word(conn, name, phone)
+        print(f" Added word { name}")
+>>>>>>> cleanup
     elif cmd == "delete":
         ID = input("  ID: ")
         delete_word(conn, ID)
+    elif cmd == "HELP":
+        print(commands)
+    elif cmd == "SAVE":
+        save_dict(conn)
+        print('SAVED')
     elif cmd == "quit":
         save_dict(conn)
         exit()
